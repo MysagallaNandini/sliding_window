@@ -1,0 +1,14 @@
+arr=list(map(int,input().split()))
+k=int(input())
+left=0
+right=k-1
+Sum=sum(arr[0:k])
+maxSun=sum
+n=len(arr)
+while(right<n-1):
+    Sum-=arr[left]
+    left+=1
+    right+=1
+    Sum+=arr[right]
+    maxSum=maxSum(maxSum,sum)
+print(maxSum)
